@@ -1,47 +1,67 @@
-# Survival Detection
+# Survival Detection — Classification
 
-This project is a **binary classification task** from the IIT Madras BS in Data Science & Applications program.  
-The goal is to predict whether a passenger survived or did not survive a historical maritime incident using passenger data.
+This repository contains my solution notebook for the **Survival Detection** competition conducted as part of the **IIT Madras BS in Data Science & Applications** program.
+
+The task was to predict whether a passenger survived or not using historical maritime passenger data.
 
 ---
 
-## Problem
-Given passenger details, predict:
-
-- `1` → Survived  
-- `0` → Did not survive  
-
-This is a **classification problem**, and the model is evaluated using **accuracy**.
+## Task Summary
+- **Problem type:** Binary classification  
+- **Target variable:** `Outcome`
+  - `1` → Survived  
+  - `0` → Did not survive  
+- **Evaluation metric:** Accuracy  
 
 ---
 
 ## Dataset
-The dataset contains passenger-level data with:
+The dataset provided by the competition includes:
+- Obfuscated feature names  
 - Missing values  
-- Noisy features  
-- Obfuscated column names  
+- Added noise to simulate real-world data  
 
-These are intentional and meant to simulate real-world datasets.
-
-### Files
+### Files used
 - `maritime_train.csv` – training data with labels  
-- `maritime_test.csv` – test data (no labels)  
-- `sample_submission.csv` – submission format  
+- `maritime_test.csv` – test data without labels  
 
-⚠️ Using external lookup tables or known survival labels is **not allowed**.
-
----
-
-## Evaluation
-Predictions are evaluated using **Accuracy**:
-
+External lookup tables or known survival labels were **not used**, as per competition rules.
 
 ---
 
-## Submission Format
-The submission file must be a CSV with the following columns:
+## What I Did
+- Performed basic data cleaning and preprocessing  
+- Handled missing values  
+- Encoded categorical features where required  
+- Scaled numerical features  
+- Trained classification models  
+- Evaluated performance using accuracy  
+- Generated predictions for the final submission  
 
-```csv
-PassengerName,Outcome
-"Braund, Mr. Owen Harris",0
-"Heikkinen, Miss. Laina",1
+---
+
+## Results
+The notebook focuses on building a clean and generalizable model rather than overfitting to the leaderboard.
+
+*(Exact accuracy depends on the hidden test set.)*
+
+---
+
+## Tools & Libraries
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+
+---
+
+## Files in This Repository
+- `survival-detection-classification.ipynb` – final submitted notebook  
+- `README.md` – project description  
+
+---
+
+## Notes
+This notebook was submitted to the official competition platform and is shared here for learning and reference purposes.
+
+---
